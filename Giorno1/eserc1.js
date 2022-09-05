@@ -16,7 +16,7 @@
 // const mixedDataTypes = [5,2,1,5,7,"8"]
 
 // // Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
-const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+// const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
 
 // // Print the array using console.log()
 // // console.log(itCompanies)
@@ -103,30 +103,61 @@ const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle"
 // - Compare the value of (min - average) and (max - average), use abs() method
 
 
-[1,2,3,4,5,6]
-const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
-const lung = ages.length
-ages.sort((a, b) => a - b)
-console.log(ages)
-const min = ages[0]
-const max = ages[lung-1]
-let median;
-if(lung%2==0){ //pari
-    median = (ages[lung/2]+ages[lung/2-1])/2
+// [1,2,3,4,5,6]
+// const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+// const lung = ages.length
+// ages.sort((a, b) => a - b)
+// console.log(ages)
+// const min = ages[0]
+// const max = ages[lung-1]
+// let median;
+// if(lung%2==0){ //pari
+//     median = (ages[lung/2]+ages[lung/2-1])/2
+// }
+// else { //dispari
+//     median = ages[lung/2-0.5]
+// }
+
+// let average = 0
+// for (let i=0; i<lung; i++){
+//     average+=ages[i]
+// }
+// average = average/lung
+
+// const range = max-min
+
+// console.log( Math.abs(min - average))
+// console.log( max - average)
+
+// console.log(min, max, median, average, range)
+
+
+const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+//Trovare le compagnie con le doppie nel nome
+const risultato = []
+
+//ciclo le parole
+for (let i=0;i<itCompanies.length;i++){
+    
+    //ciclo le lettere
+    for (let j=0;j<itCompanies[i].length-1;j++){ //-1 perchè evito di controllare l'ultimo con il "successivo" che non esiste
+        if(itCompanies[i][j]==itCompanies[i][j+1]){
+            risultato.push(itCompanies[i])
+            break //se l'ho trovata, la doppia, inutile che vada avanti
+        }
+    }
 }
-else { //dispari
-    median = ages[lung/2-0.5]
-}
+console.log(risultato)
 
-let average = 0
-for (let i=0; i<lung; i++){
-    average+=ages[i]
-}
-average = average/lung
+//Stampare una matrice quadrata con un carattere lungo le diagonali e tutti 0 altrove.
+// grandezza e carattere a scelta
 
-const range = max-min
 
-console.log( Math.abs(min - average))
-console.log( max - average)
+//scelgo la grandezza
+//scelgo il carattere
+//creo l'array di grandezza
+//per ogni elemento dell'array ci metto dentro un array di grandezza pieno di 0
 
-console.log(min, max, median, average, range)
+//scorro tutto l'array
+//se mi trovo in una posizione che sta sulla diagonale ci metto uno 0
