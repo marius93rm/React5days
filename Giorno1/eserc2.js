@@ -3,9 +3,38 @@
 
 
 //scelgo la grandezza
-//scelgo il carattere
-//creo l'array di grandezza
-//per ogni elemento dell'array ci metto dentro un array di grandezza pieno di 0
+const grandezza = 7
 
-//scorro tutto l'array
-//se mi trovo in una posizione che sta sulla diagonale ci metto uno 0
+//scelgo il carattere
+const carattere = "F"
+
+//creo l'array di grandezza
+const arr = Array(grandezza)
+for (let i = 0; i < grandezza; i++) {
+    arr[i] = Array(grandezza).fill(0)
+}
+
+//stampo
+stampaCarina(arr)
+
+for (let i = 0; i < grandezza; i++) {
+    for (let j = 0; j < grandezza; j++) {
+        if (i == j || i+j==grandezza-1) {
+            arr[i][j] = carattere
+        }
+    }
+}
+stampaCarina(arr)
+
+
+function stampaCarina(daStampare) {
+    let stampa = ""
+    for (let i = 0; i < daStampare.length; i++) {
+        for (let j = 0; j < daStampare.length; j++) {
+            stampa += daStampare[i][j] + " "
+        }
+        console.log(stampa)
+        stampa = ""
+    }
+    console.log("=============================== \n")
+}
