@@ -84,13 +84,51 @@ for(let i=0;i<vettore.length;i++){
 
 
 //Object
-const person = {}
-const rettangolo = {
-    length: 29,
-    width: 20
-}
-console.log(rettangolo)
+// const person = {}
+// const rettangolo = {
+//     length: 29,
+//     width: 20
+// }
+// console.log(rettangolo)
 
-for (const chiave in rettangolo){
-    console.log("la "+chiave+" è: "+rettangolo[chiave]+" ")
+// for (const chiave in rettangolo){
+//     console.log("la "+chiave+" è: "+rettangolo[chiave]+" ")
+// }
+
+const persona = {
+    nome: "Marius",
+    cognome: "Minia",
+    eta: 28,
+    skills: [
+        "HTML",
+        "CSS",
+        "Javascript"
+    ],
+    getNomeCompleto: function () {//concatenazione
+        return this.nome+" "+this.cognome
+    },
+    getNomeECognome: function () { //literal template
+        return `il nome completo è ${this.nome} ${this.cognome}`
+    }
 }
+
+console.log(persona["nome"])
+console.log(persona.nome)
+console.log(persona.getNomeCompleto())
+console.log(persona.getNomeECognome())
+
+persona["residenza"]="Roma"
+persona.stato="non sposato"
+
+console.log(persona.residenza)
+console.log(persona.stato)
+
+persona.etaAllaPensione = function () {
+    return 60-this.eta
+}
+
+console.log(persona.etaAllaPensione())
+
+//prendere tutte le chiavi
+const keys = Object.keys(persona)
+console.log(keys)
