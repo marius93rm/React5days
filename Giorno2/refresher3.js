@@ -62,7 +62,7 @@
 
 
 //forEach
-const countries = ['Finland','Estonia','Sweden','Norway']
+const countries = ['Finland','Estonia','Sweden','Norway', 'Iceland']
 
 // //vecchio stile
 // countries.forEach(function (country, index, arr){
@@ -72,3 +72,30 @@ const countries = ['Finland','Estonia','Sweden','Norway']
 //ES6
 countries.forEach( (country, i) => console.log(i, country.toUpperCase()))
 
+//map
+const newCountries = countries.map( (country) => country.toUpperCase())
+
+//filter
+const newCountries2 = countries.filter( (country) => country.includes("land") )
+
+//reduce
+const numeretti = [5,6,7,8,9]
+const sum = numeretti.reduce( (accumulo, corrente) => accumulo+corrente ) 
+// console.log(sum)
+
+//find
+const newCountries3 = countries.find( (country) => country.includes("land"))
+// console.log(newCountries3)
+
+//findIndex
+const newCountries4 = countries.findIndex( (country) => country.length === 6)
+
+//some
+console.log( numeretti.some( (x) => x>10) )
+console.log( numeretti.some( (x) => x<5) )
+console.log( numeretti.some( (x) => x>7) )
+
+//every
+console.log( numeretti.every( (x) => x<10) )
+console.log( numeretti.every( (x) => x<5) )
+console.log( numeretti.every( (x) => x>7) )
