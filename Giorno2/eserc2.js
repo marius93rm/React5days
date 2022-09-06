@@ -15,7 +15,7 @@ for (let i = 0; i < grandezza; i++) {
 }
 
 //stampo
-stampaCarina(arr)
+//stampaCarina(arr)
 
 for (let i = 0; i < grandezza; i++) {
     for (let j = 0; j < grandezza; j++) {
@@ -24,13 +24,13 @@ for (let i = 0; i < grandezza; i++) {
         }
     }
 }
-stampaCarina(arr)
+//stampaCarina(arr)
 
 
 function stampaCarina(daStampare) {
     let stampa = ""
     for (let i = 0; i < daStampare.length; i++) {
-        for (let j = 0; j < daStampare.length; j++) {
+        for (let j = 0; j < daStampare[i].length; j++) {
             stampa += daStampare[i][j] + " "
         }
         console.log(stampa)
