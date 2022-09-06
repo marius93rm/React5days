@@ -38,3 +38,5 @@ function stampaCarina(daStampare) {
     }
     console.log("=============================== \n")
 }
+
+module.exports = {stampaCarina}
