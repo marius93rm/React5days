@@ -50,4 +50,22 @@ const users = {
     }
   }
 
-  
+//count logged in users
+let count = 0;
+
+for (const chiave in users){
+    if(users[chiave].isLoggedIn) count++;
+}
+
+console.log(count)
+
+
+//count users having >= 50 points
+
+//find people who are MERN stack developer
+//MongoDB
+//Express
+//React
+//Node
+
+//set your name in the users object
