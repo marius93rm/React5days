@@ -26,9 +26,9 @@ const headerStlyes = {
 }
 
 const header = (
-  <header style={headerStlyes}>
+  <header style={ headerStlyes }>
     <h1 className="centro">Benvenuti nel nostro sito</h1>
-    <h2 style={{ margin: "10px 0 0 0" }}>Cominciamo con il tutorial di React</h2>
+    <h2 style={ { margin: "10px 0 0 0" } }>Cominciamo con il tutorial di React</h2>
     <h3 style={{ margin: "0px" }}>una libreria per creare pezzi di UI</h3>
     <small>{oggi}</small>
   </header>
@@ -107,7 +107,6 @@ const main = (
     <div className="flex-row">
       {techsFormatted}
     </div>
-
   </main>
 )
 
@@ -136,7 +135,7 @@ const buttonStyles = {
 
 const subscribe = (
   <div className="centro" style={subscribeStyles}>
-    <h3 className="centro">Subscribe</h3>
+    <h3>Subscribe</h3>
     <p>Sign up with your email address to receive news and updates.</p>
     <div style={inputStyles}>
       <input style={textStyles} type="text" name="firstName" placeholder='First name' />
