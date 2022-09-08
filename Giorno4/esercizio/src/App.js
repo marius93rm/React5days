@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import Lista from './Lista'
 
 const tenHighestPopulation = [
   { country: 'World', population: 7693165599 },
@@ -17,21 +17,15 @@ const tenHighestPopulation = [
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="centro">
+        <h1>Esercizio</h1>
+        <h2>World Population</h2>
+        <small>ten most populated countries!</small>
+      </div>
+      <div className="small-container">
+        <Lista paesi={tenHighestPopulation}></Lista>
+      </div>
     </div>
   );
 }
