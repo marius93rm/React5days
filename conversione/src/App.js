@@ -25,28 +25,35 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { tema: "chiaro" }
+    this.state = { tema: true }
   }
 
   handleSwitch = () => {
-    console.log("test")
-    if (this.state.tema === "chiaro") {
-      console.log("imposto scuro")
-      this.setState({ backgroundColor: "scuro" })
+    // console.log("test")
+    // if (this.state.tema === "chiaro") {
+    //   console.log("imposto scuro")
+    //   this.setState({ backgroundColor: "scuro" })
 
-    }
-    else {
-      console.log("imposto chiaro")
-      this.setState({ backgroundColor: "chiaro" })
-    }
+    // }
+    // else {
+    //   console.log("imposto chiaro")
+    //   this.setState({ backgroundColor: "chiaro" })
+    // }
+
+    this.setState( prevState => ({
+      tema : !prevState.tema
+    }))
   }
 
   render() {
 
     return (
-      <div className={this.state.tema} >
+      <div className={this.state.tema ? "chiaro" : "scuro"}>
         <Header />
-        <Bottone handleSwitch={this.handleSwitch} />
+        <Bottone handleSwitch={this.handleSwitch} tema={this.state.tema} />
+        {/* <button onClick={this.handleSwitch}>
+          {this.state.tema ? 'chiaro' : 'scuro'}
+        </button> */}
         <Utente autore={autore} />
         <Main techs={techs} />
         <Subscribe />
