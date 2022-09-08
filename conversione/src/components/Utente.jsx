@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Skill from './Skill'
+import Pic from './Pic'
 
 import spunta from '../imgs/spunta.png'
 
@@ -8,14 +9,6 @@ import spunta from '../imgs/spunta.png'
 class Utente extends React.Component {
 
     render() {
-        const utenteStyles = {
-            marginTop: "30px",
-            width: "150px",
-            height: "150px",
-            borderRadius: "50%",
-            objectFit: "cover"
-        }
-
         const spuntaStyles = {
             width: "auto",
             height: "15px",
@@ -29,7 +22,8 @@ class Utente extends React.Component {
         return (
             <div>
                 <div className="centro">
-                    <img src={this.props.autore.img} alt="Napoleone" style={utenteStyles} />
+                    {/* <img src={this.props.autore.img} alt="Napoleone" style={utenteStyles} /> */}
+                    <Pic img={this.props.autore.img} />
                     <p style={{ margin: "0" }}>
                         {this.props.autore.nome.toUpperCase()} {this.props.autore.cognome.toUpperCase()}
                         <img style={spuntaStyles} src={spunta} alt="utente verificato" />
