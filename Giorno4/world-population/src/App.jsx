@@ -1,5 +1,5 @@
 import './App.css';
-import Skills from './Skills'
+import Lista from './Lista'
 
 const tecnologie = [
   ['HTML', 10],
@@ -13,7 +13,7 @@ function App() {
     <div className="container">
       <div>
         <h1>Skill level</h1>
-        <Skills skills={tecnologie} />
+        <Lista lista={tecnologie} />
       </div>
     </div>
   );

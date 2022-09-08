@@ -4,11 +4,11 @@ function Skill({ skill: [tech, level] }) {
     )
 }
 
-function Skills(props) {
-    const skillsList = props.skills.map((skill, index) =>
+function Lista(props) {
+    const skillsList = props.lista.map((skill, index) =>
         <Skill skill={skill} key={index} />)
     return <ul>{skillsList}</ul>
 }
 
 
-export default Skills
+export default Lista
