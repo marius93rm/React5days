@@ -12,7 +12,7 @@ class Clock extends React.Component {
         this.timmerID = setInterval(
             () => this.tick(),
             1000
-        )
+        ) 
 
     }
 
