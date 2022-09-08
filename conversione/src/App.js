@@ -25,25 +25,26 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { backgroundColor: "#F7EDE2" }
+    this.state = { tema: "chiaro" }
   }
 
   handleSwitch = () => {
-    if (this.state.backgroundColor === "#F7EDE2") {
-      this.setState({ backgroundColor: "#84A59D" })
+    console.log("test")
+    if (this.state.tema === "chiaro") {
+      console.log("imposto scuro")
+      this.setState({ backgroundColor: "scuro" })
+
     }
     else {
-      this.setState({ backgroundColor: "#F7EDE2" })
+      console.log("imposto chiaro")
+      this.setState({ backgroundColor: "chiaro" })
     }
   }
 
   render() {
 
-    const stileApp = {backgroundColor : this.setState.backgroundColor}
-    
-
     return (
-      <div className="small-container" style={stileApp}>
+      <div className={this.state.tema} >
         <Header />
         <Bottone handleSwitch={this.handleSwitch} />
         <Utente autore={autore} />
