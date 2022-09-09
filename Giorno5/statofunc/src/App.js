@@ -40,7 +40,7 @@ function App() {
         Search: <input type="text" name="query" onChange={handleSearch}/>
       </div>
       <ul style={noPuntini}>
-        {filterList.map((item, index) => {
+        {filterList.map( (item, index) => {
           return <li key={index}>{item}</li>
         })}
       </ul>
