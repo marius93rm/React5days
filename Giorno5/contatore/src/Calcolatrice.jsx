@@ -33,7 +33,6 @@ class Calcolatrice extends React.Component {
     render() {
         return (
             <div className='small-container centro'>
-                <h1>Calcolatrice</h1>
                 <h2>{this.state.risultato}</h2>
                 <div className='flex-row'>
                     <button className='one-third' onClick={() => { this.handleClick("1") }} >1</button>
