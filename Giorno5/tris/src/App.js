@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import './App.css';
 
-
-
 //square
 function Square(props) {
   return (
@@ -11,12 +9,11 @@ function Square(props) {
       {props.value}
     </button>
   );
-
 }
 
 //tris game
 function Board(props) {
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState(Array(3).fill(null))
   const [xIsNext, setXIsNext] = useState(true);
 
   function calculateWinner(squares) {
@@ -25,15 +22,17 @@ function Board(props) {
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
+
       [0, 3, 6],
       [1, 4, 7],
       [2, 5, 8],
+
       [0, 4, 8],
       [2, 4, 6],
     ];
     //check if there is a winner
     for (let i = 0; i < lines.length; i++) { //for each line
-      const [a, b, c] = lines[i]; //get the 3 squares
+      const [a, b, c] = lines[i]; //get the 3 squares of the line
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) { //if they are not null and they are equal
         return squares[a]; //return the winner
       }
