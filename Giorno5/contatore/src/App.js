@@ -1,5 +1,6 @@
 import './App.css';
 import Contatore from './Contatore';
+import Calcolatrice from './Calcolatrice';
 
 function App() {
   
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className='app'>
       <Contatore />
+      <Calcolatrice />
     </div>
   );
 };
